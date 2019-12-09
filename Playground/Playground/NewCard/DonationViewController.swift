@@ -34,11 +34,18 @@ class DonationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.navigationBar.barTintColor = UIColor(rgb: 0x6631AC)
+    setupTableView()
+    feed()
+  }
+  
+  func setupTableView() {
+    let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 14))
+    customView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     tableView.dataSource = self
     tableView.delegate = self
     tableView.register(UINib(nibName: "FoundationTableViewCell", bundle: nil), forCellReuseIdentifier: "FoundationTableViewCell")
-    feed()
     tableView.sectionHeaderHeight = 40
+    tableView.tableFooterView = customView
   }
   
   func feed() {
@@ -61,6 +68,7 @@ extension DonationViewController: UITableViewDelegate {
     myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
     
     let headerView = UIView()
+    headerView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     headerView.addSubview(myLabel)
     return headerView
   }
@@ -87,4 +95,3 @@ extension DonationViewController: UITableViewDataSource {
     return cell
   }
 }
-
