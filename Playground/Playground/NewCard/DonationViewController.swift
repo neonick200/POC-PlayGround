@@ -16,14 +16,14 @@ class DonationViewController: UIViewController {
   var exampleModel: ExampleModel?
   var sectionArray: [[Foundation]] = []
   
-  var nameofKey: (String) -> String = {
+  var nameofKey: (String,Int) -> String = {
     switch $0 {
     case "F":
-      return "FOUNDATION"
+      return "FOUNDATION (\($1))"
     case "H":
-      return "HOSPITAL"
+      return "HOSPITAL (\($1))"
     case "A":
-      return "ACADEMY"
+      return "ACADEMY (\($1))"
     case "R":
       return "RECOMMEND FOUNDATIONS"
     default:
@@ -81,7 +81,7 @@ extension DonationViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return nameofKey(sectionArray[section].first!.key)
+    return nameofKey(sectionArray[section].first!.key, sectionArray[section].count)
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
