@@ -39,13 +39,11 @@ class DonationViewController: UIViewController {
   }
   
   func setupTableView() {
-    let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 14))
+    let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 0))
     customView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     tableView.dataSource = self
     tableView.delegate = self
     tableView.register(UINib(nibName: "FoundationTableViewCell", bundle: nil), forCellReuseIdentifier: "FoundationTableViewCell")
-    tableView.sectionHeaderHeight = 40
-    tableView.tableFooterView = customView
   }
   
   func feed() {
@@ -59,19 +57,19 @@ class DonationViewController: UIViewController {
 }
 
 extension DonationViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    
-    let myLabel = UILabel()
-    myLabel.frame = CGRect(x: 12, y: 16, width: 320, height: 14)
-    myLabel.font = UIFont.systemFont(ofSize: 14)
-    myLabel.textColor = .lightGray
-    myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-    
-    let headerView = UIView()
-    headerView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
-    headerView.addSubview(myLabel)
-    return headerView
-  }
+//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//    let myLabel = UILabel()
+//    myLabel.frame = CGRect(x: 12, y: 12, width: 320, height: 16)
+//    myLabel.font = UIFont.systemFont(ofSize: 14)
+//    myLabel.textColor = .lightGray
+//    myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+//
+//    let headerView = UIView()
+//    headerView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+//    headerView.addSubview(myLabel)
+//    return headerView
+//  }
 }
 
 extension DonationViewController: UITableViewDataSource {
