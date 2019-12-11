@@ -70,6 +70,8 @@ extension iCarouselViewController: iCarouselDataSource {
     switch option {
     case .spacing:
       return value * 1.045
+    case .wrap:
+      return 1
     default :
       return value
     }
