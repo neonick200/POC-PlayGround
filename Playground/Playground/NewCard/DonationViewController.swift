@@ -61,7 +61,7 @@ extension DonationViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
     let myLabel = UILabel()
-    myLabel.frame = CGRect(x: 12, y: 20, width: 320, height: 14)
+    myLabel.frame = CGRect(x: 12, y: 16, width: 320, height: 14)
     myLabel.font = UIFont.systemFont(ofSize: 14)
     myLabel.textColor = .lightGray
     myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
@@ -73,7 +73,7 @@ extension DonationViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 50
+    return 40
   }
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     return .leastNormalMagnitude
