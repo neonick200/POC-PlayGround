@@ -71,7 +71,7 @@ extension DonationViewController: UITableViewDelegate {
     headerView.addSubview(myLabel)
     return headerView
   }
-  
+
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 40
   }
@@ -82,22 +82,19 @@ extension DonationViewController: UITableViewDelegate {
 
 extension DonationViewController: UITableViewDataSource {
   
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return sectionArray.count
-  }
-  
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return nameofKey(sectionArray[section].first!.key, sectionArray[section].count)
+    return "DONATION BY TYPES"
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return sectionArray[section].count
+    return sectionArray.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "FoundationTableViewCell") else {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "FoundationTableViewCell") as? FoundationTableViewCell else {
       return UITableViewCell()
     }
+//    cell.updateUI(viewModel: FoundationTableViewCellModel.ViewModel(image: <#T##UIImage#>, title: <#T##String#>, description: <#T##String#>))
     return cell
   }
 }

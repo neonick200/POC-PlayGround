@@ -10,5 +10,6 @@
 #define Header_h
 
 #import "iCarousel.h"
+#import "SwipeView.h"
 
 #endif /* Header_h */

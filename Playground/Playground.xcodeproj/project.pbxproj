@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		484A774B6268A5DA33FFF808 /* Pods_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A9051B4759909E45A3D33B /* Pods_Playground.framework */; };
 		EC5A63E923965BA700F25481 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A63E823965BA700F25481 /* UINavigationController.swift */; };
+		EC621B5223AA0EDE008941A5 /* ListOfDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC621B5123AA0EDE008941A5 /* ListOfDonationViewController.swift */; };
+		EC621B5423AA0EF4008941A5 /* ListOfDonation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC621B5323AA0EF4008941A5 /* ListOfDonation.storyboard */; };
+		EC621B5723AB29C4008941A5 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC621B5523AB29C4008941A5 /* SwipeView.m */; };
+		EC621B5A23AB2C1A008941A5 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC621B5923AB2C1A008941A5 /* SwipeViewController.swift */; };
 		EC6C130E2397BEB70029FBF7 /* NewPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6C130D2397BEB70029FBF7 /* NewPage.storyboard */; };
 		EC6C13102397BEC70029FBF7 /* NewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C130F2397BEC70029FBF7 /* NewPageViewController.swift */; };
 		EC92AC25239A00C000CC6FBC /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92AC24239A00C000CC6FBC /* DonationViewController.swift */; };
@@ -33,6 +37,11 @@
 /* Begin PBXFileReference section */
 		C18C058E794CA1DC63B0DAA4 /* Pods-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.debug.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.debug.xcconfig"; sourceTree = "<group>"; };
 		EC5A63E823965BA700F25481 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		EC621B5123AA0EDE008941A5 /* ListOfDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfDonationViewController.swift; sourceTree = "<group>"; };
+		EC621B5323AA0EF4008941A5 /* ListOfDonation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfDonation.storyboard; sourceTree = "<group>"; };
+		EC621B5523AB29C4008941A5 /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeView.m; path = "../../../../Downloads/SwipeView-master/SwipeView/SwipeView.m"; sourceTree = "<group>"; };
+		EC621B5623AB29C4008941A5 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwipeView.h; path = "../../../../Downloads/SwipeView-master/SwipeView/SwipeView.h"; sourceTree = "<group>"; };
+		EC621B5923AB2C1A008941A5 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		EC6C130D2397BEB70029FBF7 /* NewPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPage.storyboard; sourceTree = "<group>"; };
 		EC6C130F2397BEC70029FBF7 /* NewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPageViewController.swift; sourceTree = "<group>"; };
 		EC92AC24239A00C000CC6FBC /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +108,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EC621B5023AA0EB4008941A5 /* ListOfDonations */ = {
+			isa = PBXGroup;
+			children = (
+				EC621B5123AA0EDE008941A5 /* ListOfDonationViewController.swift */,
+				EC621B5323AA0EF4008941A5 /* ListOfDonation.storyboard */,
+			);
+			path = ListOfDonations;
+			sourceTree = "<group>";
+		};
+		EC621B5823AB2BF7008941A5 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				EC621B5923AB2C1A008941A5 /* SwipeViewController.swift */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
 		EC92AC23239A00A000CC6FBC /* NewCard */ = {
 			isa = PBXGroup;
 			children = (
+				EC621B5823AB2BF7008941A5 /* SwipeView */,
+				EC621B5023AA0EB4008941A5 /* ListOfDonations */,
 				EC92AC4B239BEE7400CC6FBC /* FoundationCell */,
 				EC92AC34239A5B7900CC6FBC /* Card */,
 				EC92AC30239A51F100CC6FBC /* iCarouselView */,
@@ -113,6 +141,8 @@
 		EC92AC28239A412800CC6FBC /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				EC621B5623AB29C4008941A5 /* SwipeView.h */,
+				EC621B5523AB29C4008941A5 /* SwipeView.m */,
 				EC92AC2A239A417A00CC6FBC /* iCarousel.h */,
 				EC92AC2C239A417A00CC6FBC /* iCarousel.m */,
 				EC92AC2F239A47BE00CC6FBC /* Playground-Bridging-Header.h */,
@@ -251,6 +281,7 @@
 				EC92AC38239A5DC900CC6FBC /* Card.xib in Resources */,
 				EC92AC4F239BEEC200CC6FBC /* FoundationTableViewCell.xib in Resources */,
 				ECC1417C238D0692005CEA84 /* LaunchScreen.storyboard in Resources */,
+				EC621B5423AA0EF4008941A5 /* ListOfDonation.storyboard in Resources */,
 				ECC14179238D0692005CEA84 /* Assets.xcassets in Resources */,
 				ECC14177238D068F005CEA84 /* Main.storyboard in Resources */,
 			);
@@ -310,10 +341,13 @@
 				EC92AC51239C1F7100CC6FBC /* TextFieldEffect.swift in Sources */,
 				EC92AC53239C1F8E00CC6FBC /* RoundedTextField.swift in Sources */,
 				EC92AC3D239BE39500CC6FBC /* ExampleModel.swift in Sources */,
+				EC621B5223AA0EDE008941A5 /* ListOfDonationViewController.swift in Sources */,
 				EC92AC4D239BEEA800CC6FBC /* FoundationTableViewCell.swift in Sources */,
 				EC5A63E923965BA700F25481 /* UINavigationController.swift in Sources */,
 				EC92AC2E239A417A00CC6FBC /* iCarousel.m in Sources */,
+				EC621B5723AB29C4008941A5 /* SwipeView.m in Sources */,
 				EC92AC32239A526B00CC6FBC /* iCarouselViewController.swift in Sources */,
+				EC621B5A23AB2C1A008941A5 /* SwipeViewController.swift in Sources */,
 				EC92AC25239A00C000CC6FBC /* DonationViewController.swift in Sources */,
 				EC92AC4A239BE9C700CC6FBC /* Extenison.swift in Sources */,
 				EC92AC36239A5CCE00CC6FBC /* CardView.swift in Sources */,

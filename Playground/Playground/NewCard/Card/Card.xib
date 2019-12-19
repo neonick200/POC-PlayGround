@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ve8-SU-ayX">
-                    <rect key="frame" x="0.0" y="-1" width="220" height="150"/>
+                    <rect key="frame" x="0.0" y="-1" width="210" height="150"/>
                     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfsdfdsfdsfsfsd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdu-O3-MQd">
@@ -25,18 +25,21 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+            <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="ve8-SU-ayX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="E8Q-on-aXw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ve8-SU-ayX" secondAttribute="bottom" id="N0u-bN-OSj"/>
                 <constraint firstItem="ve8-SU-ayX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pn3-UZ-dXL"/>
                 <constraint firstItem="Qdu-O3-MQd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="22" id="dWJ-5D-yOg"/>
-                <constraint firstItem="ve8-SU-ayX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gJc-kj-qGc"/>
+                <constraint firstItem="ve8-SU-ayX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-10" id="gJc-kj-qGc"/>
                 <constraint firstItem="Qdu-O3-MQd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="95" id="hUx-2q-2jL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qdu-O3-MQd" secondAttribute="bottom" constant="20" id="sRA-w7-hER"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="heroImageView" destination="ve8-SU-ayX" id="Y0W-4P-782"/>
                 <outlet property="textLabel" destination="Qdu-O3-MQd" id="0TV-58-ZZE"/>

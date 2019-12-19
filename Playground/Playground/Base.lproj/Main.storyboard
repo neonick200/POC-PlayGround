@@ -119,17 +119,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="110" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-Gr-PeS">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="9a5-ww-W5F">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="297"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search foundation name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-Ib-dEA">
-                                            <rect key="frame" x="16" y="16" width="343" height="32"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0t-Sj-3v5">
                                             <rect key="frame" x="0.0" y="64" width="375" height="233"/>
                                             <subviews>
@@ -185,22 +180,39 @@
                                                 <constraint firstAttribute="trailing" secondItem="Hmh-AS-bpm" secondAttribute="trailing" id="o6F-iE-UnZ"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tv9-x2-CKE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search foundation name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-Ib-dEA">
+                                                    <rect key="frame" x="16" y="16" width="343" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ROl-Ib-dEA" secondAttribute="bottom" constant="16" id="5mf-LM-7nI"/>
+                                                <constraint firstAttribute="trailing" secondItem="ROl-Ib-dEA" secondAttribute="trailing" constant="16" id="KbC-ee-B8g"/>
+                                                <constraint firstAttribute="height" constant="67" id="Ouc-Mz-CnG"/>
+                                                <constraint firstItem="ROl-Ib-dEA" firstAttribute="leading" secondItem="Tv9-x2-CKE" secondAttribute="leading" constant="16" id="UA2-ru-tHR"/>
+                                                <constraint firstItem="ROl-Ib-dEA" firstAttribute="top" secondItem="Tv9-x2-CKE" secondAttribute="top" constant="16" id="m0E-dH-Udu"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="ROl-Ib-dEA" secondAttribute="trailing" constant="16" id="8zb-mt-IqA"/>
                                         <constraint firstAttribute="bottom" secondItem="G0t-Sj-3v5" secondAttribute="bottom" id="AMA-Xr-fGf"/>
-                                        <constraint firstItem="G0t-Sj-3v5" firstAttribute="top" secondItem="ROl-Ib-dEA" secondAttribute="bottom" constant="16" id="KAD-3c-lDg"/>
+                                        <constraint firstItem="Tv9-x2-CKE" firstAttribute="leading" secondItem="9a5-ww-W5F" secondAttribute="leading" id="Iy2-D6-OGg"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tv9-x2-CKE" secondAttribute="trailing" id="LKI-KY-5sW"/>
                                         <constraint firstAttribute="trailing" secondItem="G0t-Sj-3v5" secondAttribute="trailing" id="TNq-OU-xul"/>
-                                        <constraint firstItem="ROl-Ib-dEA" firstAttribute="top" secondItem="9a5-ww-W5F" secondAttribute="top" constant="16" id="WqQ-mB-pVp"/>
-                                        <constraint firstItem="ROl-Ib-dEA" firstAttribute="leading" secondItem="9a5-ww-W5F" secondAttribute="leading" constant="16" id="jGR-qu-CSQ"/>
+                                        <constraint firstItem="Tv9-x2-CKE" firstAttribute="top" secondItem="9a5-ww-W5F" secondAttribute="top" id="fjU-GE-7lU"/>
                                         <constraint firstItem="G0t-Sj-3v5" firstAttribute="leading" secondItem="9a5-ww-W5F" secondAttribute="leading" id="p8V-ST-Y4q"/>
                                     </constraints>
                                 </view>
                                 <sections/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="g5j-Gr-PeS" firstAttribute="trailing" secondItem="1Ld-EJ-frc" secondAttribute="trailing" id="9QH-zc-oiE"/>
                             <constraint firstItem="g5j-Gr-PeS" firstAttribute="leading" secondItem="1Ld-EJ-frc" secondAttribute="leading" id="Rii-TA-R49"/>
@@ -255,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="-188" y="655"/>
         </scene>
-        <!--Carousel View Controller-->
+        <!--Swipe View Controller-->
         <scene sceneID="N3E-if-sQz">
             <objects>
-                <viewController id="o51-lM-7bw" customClass="iCarouselViewController" customModule="Playground" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o51-lM-7bw" customClass="SwipeViewController" customModule="Playground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTM-A8-PC6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +284,7 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VT9-YD-P4c" customClass="iCarousel">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VT9-YD-P4c" customClass="SwipeView">
                                 <rect key="frame" x="-136" y="0.0" width="511" height="136"/>
                                 <color key="backgroundColor" red="0.95294767619999998" green="0.95292979479999995" blue="0.95294183489999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -292,8 +304,8 @@
                         <viewLayoutGuide key="safeArea" id="MdN-a4-Gsm"/>
                     </view>
                     <connections>
-                        <outlet property="carousel" destination="VT9-YD-P4c" id="ZVe-oU-sIE"/>
-                        <outlet property="pageControl" destination="QYp-Ks-O9Z" id="vzw-Sq-yxJ"/>
+                        <outlet property="pagecontrol" destination="QYp-Ks-O9Z" id="MdH-sX-Mbr"/>
+                        <outlet property="swipeView" destination="VT9-YD-P4c" id="dlk-QE-GaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8tG-9b-c6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
