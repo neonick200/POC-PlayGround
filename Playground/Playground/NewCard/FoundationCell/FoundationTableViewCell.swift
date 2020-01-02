@@ -18,6 +18,7 @@ struct FoundationTableViewCellModel {
 
 class FoundationTableViewCell: UITableViewCell {
   
+  @IBOutlet weak var shadowView: UIView!
   @IBOutlet weak var view: UIView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
@@ -26,14 +27,13 @@ class FoundationTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    view.layer.masksToBounds = true
-    view.layer.shadowColor = UIColor.black.cgColor
-    view.layer.cornerRadius = 7
-    view.layer.shadowOffset = CGSize(width: 1, height: 1)
-    view.layer.shadowOpacity = 0.25
-    view.layer.shadowRadius = 1
 //    heroImage.layer.shadowColor = UIColor.black.cgColor
-
+    shadowView.layer.shadowColor = UIColor.black.cgColor
+    shadowView.layer.shadowOffset = CGSize(width: 1, height: 1)
+    shadowView.layer.shadowOpacity = 0.25
+    shadowView.layer.shadowRadius = 1
+    shadowView.layer.cornerRadius = 7
+    view.layer.cornerRadius = 7
     // Initialization code
   }
   

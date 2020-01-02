@@ -22,9 +22,22 @@ struct CardviewModel {
 class CardView: UIView {
   @IBOutlet private weak var textLabel: UILabel!
   @IBOutlet private weak var heroImageView: UIImageView!
+  @IBOutlet weak var shadowView: UIView!
+  @IBOutlet weak var heroView: UIView!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    shadowView.layer.shadowColor = UIColor.black.cgColor
+    shadowView.layer.shadowOffset = CGSize(width: 1, height: 1)
+    shadowView.layer.shadowOpacity = 0.25
+    shadowView.layer.shadowRadius = 1
+//    shadowView.layer.cornerRadius = 7
+//    shadowView.layer.masksToBounds = false
+//    heroView.layer.cornerRadius = 7
+//    heroView.layer.masksToBounds = true
+  }
   
   func updateUI(with data: CardviewModel) {
-    heroImageView.layer.cornerRadius = 7
     textLabel.text = data.text
     heroImageView.image = data.image
   }

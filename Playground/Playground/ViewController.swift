@@ -12,35 +12,43 @@ import WebKit
 class ViewController: UIViewController {
   
   @IBOutlet weak var webView: WKWebView!
-  var appleTap = false
-  var chooseURL : URL {
-    if appleTap {
-      return URL(string: "https://www.apple.com")!
-    } else {
-      return URL(string:"http://192.168.1.125:8888/untitled/TestUniversalLink.php#")!
-    }
-  }
+  @IBOutlet weak var heroImage: UIImageView!
+  @IBOutlet weak var iconImage: UIImageView!
+  @IBOutlet weak var buttomWebView: NSLayoutConstraint!
+  @IBOutlet weak var constraint_WebViewHeight: NSLayoutConstraint!
+  @IBOutlet weak var topWebView: NSLayoutConstraint!
+  @IBOutlet weak var heroView: UIView!
+  
+  let myRequest = URLRequest(url: URL(string: "https://www.apple.com")!)
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
-  
-  @IBAction func appleTaped(_ sender: Any) {
-    appleTap = true
-    let myRequest = URLRequest(url: chooseURL)
+    webView.scrollView.bounces = false
+    webView.scrollView.isScrollEnabled = false
+    self.webView.navigationDelegate = self
     webView.load(myRequest)
   }
   
-  @IBAction func mySiteTapped(_ sender: Any) {
-    appleTap = false
-    let myRequest = URLRequest(url: chooseURL)
-    webView.load(myRequest)
+  @IBAction func hideOnTapped(_ sender: Any) {
+    heroView.isHidden = true
+    topWebView.constant = 0
   }
   
-  @IBAction func goNavigation(_ sender: Any) {
-    let bundle = Bundle.main
-    let storyboard = UIStoryboard(name: "NewPage", bundle: bundle)
-    navigationController?.pushViewController(storyboard.instantiateInitialViewController()!, animated: true)
+  @IBAction func unhideOnTapped(_ sender: Any) {
+    heroView.isHidden = false
+    topWebView.constant = 129
+  }
+  
+  
+}
+
+extension ViewController: WKNavigationDelegate {
+  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    DispatchQueue.main.async {
+      print(self.constraint_WebViewHeight.constant)
+      self.constraint_WebViewHeight.constant = webView.scrollView.contentSize.height
+      print(self.constraint_WebViewHeight.constant)
+    }
   }
 }
 
